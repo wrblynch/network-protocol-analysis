@@ -14,13 +14,13 @@ We began by capturing our packets for each of the protocols.  Firstly, we captur
 
 After we captured our packets we needed to parse them out.  This proved to be difficult to do when it came to parsing by protocols that were not in the dpkt register of protocols.  This register did not include FTP, BitTorrent or HTTP.  For these captures, we filtered them out in wireshark and then exported only the displayed packets. So ultimately we had .pcap files that only included the protocols we wished to view.  This made it easier for us to parse the payload size and inter arrival time because we did not need to check if the packets were our desired protocol.  
 
-![Image Caption](images/bittorrentsnip.png)
+![Image Caption](images/bittorrentsnip.PNG)
 
-![Image Caption](images/ftpsnip.png)
+![Image Caption](images/ftpsnip.PNG)
 
-![Image Caption](images/httpsnip.png)
+![Image Caption](images/httpsnip.PNG)
 
-![Image Caption](images/voipsnip.png)
+![Image Caption](images/voipsnip.PNG)
 
 VoIP was done differently however, we filterd in python by the UDP port of Zoom used during our call. 
 
