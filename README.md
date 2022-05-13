@@ -47,11 +47,23 @@ After parsing out the data we saved them to CSV files so that we could use MatLa
 
 ### How does the payload size distribution of different applications differ from each other?
 
+## VoIP
 
+Taking a look at VoIP, we see that the CDF of the interarrival time follows an exponential distribution . As time goes on, there is a higher probability that a packet will come in. The PDF also goes into line of the properties of VoIP. The protocol defines a certain amount of data to be sent for a period of time during a voice spurt. So it is expected that we see a large spike at 1032 which is most likely the datarate that zoom transmits its data.
+
+## HTTP
+
+For HTTP, we captured HTTP packets that were operating under the TCP protocol. As such, HTTP packets are only responsible for creating the data to be sent, since it is an application layer protocol. The actual packets are sent via TCP/UDP (TCP in this case). A large majority of the packets have a payload size of 1445, meaning that TCP split up the data to be sent in 1445 byte chunks.
 
 ---
 
 ### Explain your observations of the inter-arrival time distribution. 
+
+The interarrival time of bitTorrent and VoIP both follow an exponential distribution. 
+
+This may be due to the fact that these two protocols can be considered as poisson processes. For bitTorrent, the amount of packets that we receieve is ultimately dependent on tit=for-tat, meaning most of the time we have a fixed data rate. However, we do not necessarily know when we will be receiving packets, since bitTorrent also uses chunk selection algorithms, as well as the fact that we won't be downloading chunks we already have. This follows the general model of a poisson process.
+
+For VoIP, we have a definitive data rate determined by Zoom, and since the voice spurts between two persons talking is random, this also fits a poisson process. As such, if we take the interarrival times of these poisson processes, we would receieve an exponential distribution (as discussed in ECE 158A)
 
 
 ---
