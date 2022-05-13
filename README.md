@@ -47,19 +47,27 @@ After parsing out the data we saved them to CSV files so that we could use MatLa
 
 ### How does the payload size distribution of different applications differ from each other?
 
-Most internet protocols have a set limit on the amount of data that can be sent over a single packet, as such a lot of these distributions have some similarities.
-
-#### VoIP
+### VoIP
 
 Taking a look at VoIP, we see that the CDF of the interarrival time follows an exponential distribution . As time goes on, there is a higher probability that a packet will come in. The PDF also goes into line of the properties of VoIP. The protocol defines a certain amount of data to be sent for a period of time during a voice spurt. So it is expected that we see a large spike at 1032 which is most likely the datarate that zoom transmits its data.
 
-#### HTTP
+| ![Image Caption](images/voippaycdf.PNG) | ![Image Caption](images/voippaypdf.PNG) |
 
-For HTTP, we captured HTTP packets that were operating under the TCP protocol. As such, HTTP packets are only responsible for creating the data to be sent, since it is an application layer protocol. The actual packets are sent via TCP/UDP (TCP in this case). A large majority of the packets have a payload size of 1445, meaning that TCP split up the data to be sent in 1445 byte chunks.
+### HTTP
 
-#### BitTorrent
+For HTTP, we captured HTTP packets that were operating under the TCP protocol. As such, HTTP packets are only responsible for creating the data to be sent, since it is an application layer protocol. The actual packets are sent via TCP/UDP (TCP in this case). A large majority of the packets have a payload size of 1445, meaning that TCP split up the data to be sent in 1445 byte chunks as that is probably some max sized chunk it could send.  All of these 1460 sized payloads were labeled under info as 'continuation'.
 
-Similar to VoIP, a large majority of the packets lie in the same payload size. 
+| ![Image Caption](images/httppaycdf.PNG) | ![Image Caption](images/httppaypdf.PNG) |
+
+### BitTorrent
+
+
+| ![Image Caption](images/bitpaycdf.PNG) | ![Image Caption](images/bitpaypdf.PNG) |
+
+### FTP
+
+
+| ![Image Caption](images/ftppaycdf.PNG) | ![Image Caption](images/ftppaypdf.PNG) |
 
 ---
 
