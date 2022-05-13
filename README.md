@@ -52,7 +52,7 @@ After parsing out the data we saved them to CSV files so that we could use MatLa
 Taking a look at VoIP, we see that the CDF of the interarrival time follows an exponential distribution . As time goes on, there is a higher probability that a packet will come in. The PDF also goes into line of the properties of VoIP. The protocol defines a certain amount of data to be sent for a period of time during a voice spurt. So it is expected that we see a large spike at 1032 which is most likely the datarate that zoom transmits its data.
 
 | ![Image Caption](images/voippaycdf.PNG) | 
-|----|
+|-|-|
 |![Image Caption](images/voippaypdf.PNG) |
 
 ### HTTP
@@ -60,7 +60,7 @@ Taking a look at VoIP, we see that the CDF of the interarrival time follows an e
 For HTTP, we captured HTTP packets that were operating under the TCP protocol. As such, HTTP packets are only responsible for creating the data to be sent, since it is an application layer protocol. The actual packets are sent via TCP/UDP (TCP in this case). A large majority of the packets have a payload size of 1445, meaning that TCP split up the data to be sent in 1445 byte chunks as that is probably some max sized chunk it could send.  All of these 1460 sized payloads were labeled under info as 'continuation'.
 
 | ![Image Caption](images/httppaycdf.PNG) |
-|----|
+|-|-|
 | ![Image Caption](images/httppaypdf.PNG) |
 
 ### BitTorrent
@@ -68,7 +68,7 @@ For HTTP, we captured HTTP packets that were operating under the TCP protocol. A
 For Bittorrent we are seeing a large concentration of payload sizes of 1514. It is using a TCP transport protocol so this may be the maximum chunk size or limit set by the client, or restricted by the maximum transmission unit.  Which would be the limit set by the hardware in the network. There's also a large concentration of 88 and 63 sized packets. We think these could be the messages being sent as acknowledgements and requests for chunks.  As the message type of the 63 sized payload is "Have" and the 88 is "Request". There's also a 451 sized chunk with the message "Unchoke" and a 242 sized payload with the message "Extended". This may be referring to the peer selection process, where it has evaluated a peer and chose to extend their connection or to unchoke a peer.
 
 | ![Image Caption](images/bitpaycdf.PNG) |
-|----|
+|-|-|
 | ![Image Caption](images/bitpaypdf.PNG) |
 
 ### FTP
@@ -76,7 +76,7 @@ For Bittorrent we are seeing a large concentration of payload sizes of 1514. It 
 The main messages in FTP are several small messages managing the navigation of the directories, or requesting a file or that a file has successfully be transferred.  When a file is being transferred it is done so over TCP. So FTP is solely many small varying messages.
 
 | ![Image Caption](images/ftppaycdf.PNG) |
-|----|
+|-|-|
 | ![Image Caption](images/ftppaypdf.PNG) |
 
 ---
