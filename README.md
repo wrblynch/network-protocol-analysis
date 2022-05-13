@@ -53,7 +53,7 @@ Taking a look at VoIP, we see that the CDF of the interarrival time follows an e
 
 | ![Image Caption](images/voippaycdf.PNG) | 
 |----|
-![Image Caption](images/voippaypdf.PNG) |
+|![Image Caption](images/voippaypdf.PNG) |
 
 ### HTTP
 
@@ -61,7 +61,7 @@ For HTTP, we captured HTTP packets that were operating under the TCP protocol. A
 
 | ![Image Caption](images/httppaycdf.PNG) |
 |----|
- ![Image Caption](images/httppaypdf.PNG) |
+| ![Image Caption](images/httppaypdf.PNG) |
 
 ### BitTorrent
 
@@ -69,7 +69,7 @@ For Bittorrent we are seeing a large concentration of payload sizes of 1514. It 
 
 | ![Image Caption](images/bitpaycdf.PNG) |
 |----|
- ![Image Caption](images/bitpaypdf.PNG) |
+| ![Image Caption](images/bitpaypdf.PNG) |
 
 ### FTP
 
@@ -77,7 +77,7 @@ The main messages in FTP are several small messages managing the navigation of t
 
 | ![Image Caption](images/ftppaycdf.PNG) |
 |----|
- ![Image Caption](images/ftppaypdf.PNG) |
+| ![Image Caption](images/ftppaypdf.PNG) |
 
 ---
 
