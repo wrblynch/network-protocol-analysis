@@ -65,6 +65,7 @@ For HTTP, we captured HTTP packets that were operating under the TCP protocol. A
 
 ### BitTorrent
 
+For Bittorrent we are seeing a large concentration of payload sizes of 1514. It is using a TCP transport protocol so this may be the maximum chunk size or limit set by the client, or restricted by the maximum transmission unit.  Which would be the limit set by the hardware in the network. There's also a large concentration of 88 and 63 sized packets. We think these could be the messages being sent as acknowledgements and requests for chunks.  As the message type of the 63 sized payload is "Have" and the 88 is "Request". There's also a 451 sized chunk with the message "Unchoke" and a 242 sized payload with the message "Extended". This may be referring to the peer selection process, where it has evaluated a peer and chose to extend their connection or to unchoke a peer.
 
 | ![Image Caption](images/bitpaycdf.PNG) |
 |----|
@@ -72,6 +73,7 @@ For HTTP, we captured HTTP packets that were operating under the TCP protocol. A
 
 ### FTP
 
+The main messages in FTP are several small messages managing the navigation of the directories, or requesting a file or that a file has successfully be transferred.  When a file is being transferred it is done so over TCP. So FTP is solely many small varying messages.
 
 | ![Image Caption](images/ftppaycdf.PNG) |
 |----|
