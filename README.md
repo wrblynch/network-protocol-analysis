@@ -16,7 +16,7 @@ After we captured our packets we needed to parse them out.  This proved to be di
 
 
 | ![Image Caption](images/bittorrentsnip.PNG) | ![Image Caption](images/ftpsnip.PNG) |
-|----|----|----|
+|----|----|
 | ![Image Caption](images/httpsnip.PNG) | ![Image Caption](images/voipsnip.PNG) |
 
 
