@@ -63,7 +63,7 @@ For HTTP, we captured HTTP packets that were operating under the TCP protocol. A
 |----|
 | ![Image Caption](images/httppaypdf.PNG) |
 
-Solarized dark             |  Solarized Ocean
+
 :-------------------------:|:-------------------------:
 ![](images/httppaypdf.PNG)  |  ![](images/httppaypdf.PNG)
 
