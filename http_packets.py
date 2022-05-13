@@ -37,16 +37,10 @@ def print_packets(pcap):
         ip = eth.data
         pp = eth.data.data
 
-        # Grab data by UDP
-
-        # print(ip.p)
-        # Grab data by port number 8801 = zoom
-
         # Print out the timestamp in UTC
         time1 = datetime.datetime.utcfromtimestamp(timestamp)
         tt = time1.strftime('%H:%M:%S.%f')[:-4]
 
-        # print('Arrival Time: ', str(tt))
 
         # Finding interarrival time
         numPackets += 1
@@ -57,11 +51,6 @@ def print_packets(pcap):
         # Payload size in bytes
         length = len(pp) - 8  # UDP header is 8 bytes
         lengthPackets.append(length)
-
-        time2 = datetime.datetime.utcfromtimestamp(timestamp)
-        proto = ip.get_proto(ip.p).__name__
-        print(proto)
-    print(numPackets)
 
     return lengthPackets, timeArr
 
