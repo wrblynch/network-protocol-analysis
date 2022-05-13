@@ -60,6 +60,7 @@ For HTTP, we captured HTTP packets that were operating under the TCP protocol. A
 ## BitTorrent
 
 Similar to VoIP, a large majority of the packets lie in the same payload size. 
+
 ---
 
 ### Explain your observations of the inter-arrival time distribution. 
