@@ -41,16 +41,12 @@ def print_packets(pcap):
         ip = eth.data
         pp = eth.data.data
 
-        # Grab data by UDP
+        # dpkt sees all FTP protocol as TCP
         if (ip.get_proto(ip.p).__name__ == "TCP"):
-            # print(ip.p)
-            # Grab data by port number 8801 = zoom
 
             # Print out the timestamp in UTC
             time1 = datetime.datetime.utcfromtimestamp(timestamp)
             tt = time1.strftime('%H:%M:%S.%f')[:-4]
-
-            # print('Arrival Time: ', str(tt))
 
             # Finding interarrival time
             if (numPackets > 1):
@@ -60,19 +56,8 @@ def print_packets(pcap):
             # Payload size in bytes
             length = len(pp) - 8  # UDP header is 8 bytes
             lengthPackets.append(length)
-            '''
-            print('Payload Size: ', length) 
-            print('-----SOURCE-----')
-            print(pp.sport)
-            print('-----DESTINATION-----')
-            print(pp.dport)
-            print('------------------------------------------')
-            '''
+
             numPackets += 1
-            time2 = datetime.datetime.utcfromtimestamp(timestamp)
-        proto = ip.get_proto(ip.p).__name__
-        print(proto)
-    print(numPackets)
 
     return lengthPackets, timeArr
 
