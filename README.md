@@ -43,4 +43,16 @@ if (ip.p == dpkt.ip.IP_PROTO_UDP):
 
 After parsing out the data we saved them to CSV files so that we could use MatLab to generate the CDF and PDF of each sets of data.  
 
+---
 
+### How does the payload size distribution of different applications differ from each other?
+
+
+
+---
+
+### Explain your observations of the inter-arrival time distribution. 
+
+
+
+---
