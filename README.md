@@ -20,7 +20,7 @@ After we captured our packets we needed to parse them out.  This proved to be di
 | ![Image Caption](images/httpsnip.PNG) | ![Image Caption](images/voipsnip.PNG) |
 
 
-VoIP was done differently however, we filterd in python by the UDP port of Zoom used during our call. 
+VoIP was done differently however, we filterd in python by the UDP port of Zoom used during our call. We are calculating arrival time within this chunk of code as well as filtering for the UDP zoom port. The payload is being saved as the length seen below, 8 bytes is being removed as that is the length of the UDP header. Below is an example of our code, this excerpt is from our UDP parsing.
 
 ```python
 if (ip.p == dpkt.ip.IP_PROTO_UDP):
@@ -52,7 +52,6 @@ After parsing out the data we saved them to CSV files so that we could use MatLa
 ---
 
 ### Explain your observations of the inter-arrival time distribution. 
-
 
 
 ---
