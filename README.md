@@ -93,6 +93,8 @@ This may be due to the fact that these two protocols can be considered as poisso
 
 For VoIP, we have a definitive data rate determined by Zoom, and since the voice spurts between two persons talking is random, this also fits a poisson process. As such, if we take the interarrival times of these poisson processes, we would receieve an exponential distribution (as discussed in ECE 158A)
 
+As far as HTTP and FTP go, they are only sending very small requests and messages back and forth, so the file transfer time is near neglible, thus the very high and consistent speed as well as a linear CDF.
+
 ### VoIP
 
 <p float="left">
