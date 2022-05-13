@@ -14,8 +14,8 @@ for i=1:4
     
     str_tot = strcat(str1, stri(i));
     str_tot2 = strcat(str1, strp(i));
-    payload = readmatrix(str_tot);
-    interarrival_times = readmatrix(str_tot2);
+    interarrival_times = readmatrix(str_tot);
+    payload = readmatrix(str_tot2);
 
     y_cdf = ecdf(interarrival_times);
 
