@@ -93,5 +93,32 @@ This may be due to the fact that these two protocols can be considered as poisso
 
 For VoIP, we have a definitive data rate determined by Zoom, and since the voice spurts between two persons talking is random, this also fits a poisson process. As such, if we take the interarrival times of these poisson processes, we would receieve an exponential distribution (as discussed in ECE 158A)
 
+### VoIP
+
+<p float="left">
+  <img src="images/voiptimecdf.PNG" width="400" />
+  <img src="images/voiptimepdf.PNG" width="400" /> 
+</p>
+
+### HTTP
+
+<p float="left">
+  <img src="images/httptimecdf.PNG" width="400" />
+  <img src="images/httptimepdf.PNG" width="400" /> 
+</p>
+
+### BitTorrent
+
+<p float="left">
+  <img src="images/bittimecdf.PNG" width="400" />
+  <img src="images/bittimepdf.PNG" width="400" /> 
+</p>
+
+### FTP
+
+<p float="left">
+  <img src="images/ftptimecdf.PNG" width="400" />
+  <img src="images/ftptimepdf.PNG" width="400" /> 
+</p>
 
 ---
