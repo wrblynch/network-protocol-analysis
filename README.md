@@ -65,8 +65,8 @@ For HTTP, we captured HTTP packets that were operating under the TCP protocol. A
 
 
 <p float="left">
-  <img src="images/httppaypdf.PNG" width="100" />
-  <img src="images/httppaypdf.PNG" width="100" /> 
+  <img src="images/httppaypdf.PNG" width="1000" />
+  <img src="images/httppaypdf.PNG" width="1000" /> 
 </p>
 
 Solarized dark             |  Solarized Ocean
