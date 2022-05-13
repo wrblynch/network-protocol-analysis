@@ -47,6 +47,8 @@ After parsing out the data we saved them to CSV files so that we could use MatLa
 
 ### How does the payload size distribution of different applications differ from each other?
 
+Most internet protocols have a set limit on the amount of data that can be sent over a single packet, as such a lot of these distributions have some similarities.
+
 ## VoIP
 
 Taking a look at VoIP, we see that the CDF of the interarrival time follows an exponential distribution . As time goes on, there is a higher probability that a packet will come in. The PDF also goes into line of the properties of VoIP. The protocol defines a certain amount of data to be sent for a period of time during a voice spurt. So it is expected that we see a large spike at 1032 which is most likely the datarate that zoom transmits its data.
@@ -55,6 +57,9 @@ Taking a look at VoIP, we see that the CDF of the interarrival time follows an e
 
 For HTTP, we captured HTTP packets that were operating under the TCP protocol. As such, HTTP packets are only responsible for creating the data to be sent, since it is an application layer protocol. The actual packets are sent via TCP/UDP (TCP in this case). A large majority of the packets have a payload size of 1445, meaning that TCP split up the data to be sent in 1445 byte chunks.
 
+## BitTorrent
+
+Similar to VoIP, a large majority of the packets lie in the same payload size. 
 ---
 
 ### Explain your observations of the inter-arrival time distribution. 
